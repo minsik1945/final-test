@@ -4,6 +4,7 @@ sudo yum -y install npm
 sudo yum -y install httpd
 sudo yum -y install php php-cli php-common php-fpm php-xml php-mysqlnd php-gd php-curl php-json php-mbstring php-zip php-intl
 
+sudo rm -rf /home/ec2-user/.
 
 HTTPD_FILE="/home/ec2-user/startbootstrap-shop-homepage/scripts/config_httpd"
 
