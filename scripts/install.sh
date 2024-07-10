@@ -4,7 +4,17 @@ sudo yum -y install npm
 sudo yum -y install httpd
 sudo yum -y install php php-cli php-common php-fpm php-xml php-mysqlnd php-gd php-curl php-json php-mbstring php-zip php-intl
 
-sudo rm -rf /home/ec2-user/.
+FILE="/home/ec2-user/startbootstrap-shop-homepage/scripts/build-pug.js"
+
+if [ -f "$FILE" ]; then
+    echo "$FILE exists. Deleting..."
+    rm "$FILE"
+fi
+
+# Now proceed with your deployment or file creation
+echo "Creating $FILE..."
+# touch "$FILE" # or your deployment command
+
 
 HTTPD_FILE="/home/ec2-user/startbootstrap-shop-homepage/scripts/config_httpd"
 
